@@ -1,0 +1,50 @@
+@import "~@angular/material/theming";
+
+$primary: map-get($mat-deep-purple, 500);
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 100px;
+
+  .select-container,
+  .add-container {
+    width: calc(50% - 20px);
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .result-container {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+
+    p {
+      font-size: 20px;
+
+      b {
+        color: $primary;
+      }
+    }
+
+    h3 {
+      font-size: 30px;
+      color: $primary;
+      display: block;
+    }
+  }
+}

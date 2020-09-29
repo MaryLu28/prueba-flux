@@ -18,7 +18,7 @@
 
   <div class="add-container">
     <h4>¿Deseas agregar una ciudad a la lista?</h4>
-    <form class="example-form" (ngSubmit)="onAddCity($event.value)">
+    <form class="example-form" (ngSubmit)="onAddCity()">
       <mat-form-field>
         <mat-label>Ciudad</mat-label>
         <input
@@ -33,9 +33,10 @@
   </div>
 
   <div class="result-container" *ngIf="weather$ | async as weather">
-    <h3>
-      La temperatura en <b>{{ selected }}</b> es:
-      <span>{{ weather.current.temperature }} °C</span>
-    </h3>
+    <p>
+      Temperatura en <b>{{ selected }}</b
+      >:
+    </p>
+    <h3>{{ weather.current.temperature }} °C</h3>
   </div>
 </div>
