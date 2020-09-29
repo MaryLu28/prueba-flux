@@ -28,7 +28,9 @@ export class AppComponent {
   }
 
   onAddCity() {
-    this.cities.push(this.newCity);
+    if (!this.cities.some((city) => city == this.newCity)) {
+      this.cities.push(this.newCity);
+    }
   }
 
   getWeather(city: string) {
