@@ -3,6 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface CurrentWeather {
+  request: {
+    query: string;
+  };
   current: {
     temperature: number;
   };

@@ -34,7 +34,7 @@
 
   <div class="result-container" *ngIf="weather$ | async as weather">
     <p>
-      Temperatura en <b>{{ selected }}</b
+      Temperatura en <b>{{ weather.request.query }}</b
       >:
     </p>
     <h3>{{ weather.current.temperature }} °C</h3>
